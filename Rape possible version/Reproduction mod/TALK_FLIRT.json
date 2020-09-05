@@ -1,0 +1,65 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "TALK_ALLY_FLIRT",
+    "dynamic_line": "What kind of fun?",
+    "responses": [
+      {
+	  "text": "Me and you, right here, right now.",
+	  "topic": "TALK_ALLY_FLIRT_REALISE"
+	  },
+	  {
+	  "text": "Wait, no. Forget I said anything. Let's move on.",
+	  "topic": "TALK_DONE"
+	  }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_ALLY_FLIRT_REALISE",
+    "dynamic_line": {
+	"npc_has_trait": "OFFSPRING",
+	"yes": "But... we're related...",
+	"no": "Oh! That... um..."
+	},
+    "responses": [
+      {
+	  "text": "You know you want to...",
+	  "trial": { "type": "PERSUADE", "difficulty": 30 },
+      "success": { "topic": "SEX_CONSENSUAL", "opinion": { "trust": 1, "anger": -1, "value": 1 } },
+      "failure": { "topic": "FLIRT_DENY" }
+	  },
+	  {
+	  "text": "Or else...",
+	  "trial": { "type": "INTIMIDATE", "difficulty": 30 },
+      "success": { "topic": "SEX_RAPE", "opinion": { "trust": -6, "anger": 6 } },
+      "failure": { "topic": "NO_FUCK_YOU" }
+	  }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "FLIRT_DENY",
+    "dynamic_line": "No. I don't think I do.",
+    "responses": [
+      {
+	  "text": "Oh, uh... ahem. Alright then. Moving on.",
+	  "opinion": { "trust": -1, "anger": 1 },
+	  "topic": "TALK_DONE"
+	  }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "NO_FUCK_YOU",
+    "dynamic_line": "You know what? No. Fuck you.",
+    "responses": [
+      {
+	  "text": "Alright then.",
+	  "topic": "TALK_DONE",
+	  "opinion": { "trust": -6, "anger": 6 },
+	  "effect": "hostile"
+	  }
+    ]
+  }
+]
