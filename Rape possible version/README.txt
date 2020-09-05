@@ -12,3 +12,5 @@ with the ones in found in the folder "Replacement files". If you don't and simpl
 - Sex and romancing is currently only possible with allies. Sex without a romanced partner requires a persuasion check every time. If you have romanced a character to the point of sex then you don't need to pass a persuasion check anymore but needs to be accessed through the last option of the romancing options.
 
 - If you find yourself stuck in the romance progression, think of a gift you'd like to give to your partner. A rare locket, or perhaps a ring.
+
+- Having vaginal sex will always produce an ovum ready to go into pregnancy. If you don't want to go through with it just drop the item and it'll disappear.
