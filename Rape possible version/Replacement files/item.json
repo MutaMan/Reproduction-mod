@@ -76,7 +76,6 @@
 	"use_action": {
 		"type": "place_npc",
 		"npc_class_id": "offspring",
-		"summon_msg": "Finally an adult. It's been a long journey, but your kid can now go their own way and take care of themselves, or continue helping you if you want them to.",
 		"place_randomly": false,
 		"moves": 1
 	}
@@ -136,12 +135,9 @@
     "name": { "str": "Completed pregnancy", "str_pl": "Completed pregnancies" },
     "description": "A pregnancy come to full term. Activate to give birth.",
     "flags": [ "TRADER_AVOID", "NO_INGEST", "ONLY_ONE", "ZERO_WEIGHT" ],
-	"max_charges": 2,
-    "initial_charges": 2,
     "use_action": {
 		"type": "place_monster",
 		"monster_id": "human_baby",
-		"summon_msg": "It's a healthy baby! Hope you have a baby carrier handy, because you sure as shit aren't allowed you to carry living things without such a thing.",
 		"place_randomly": false,
 		"moves": 1
 	}

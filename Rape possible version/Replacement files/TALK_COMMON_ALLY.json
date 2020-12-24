@@ -56,10 +56,9 @@
       { "text": "Can you help me understand something?  (HELP/TUTORIAL)", "topic": "TALK_ALLY_TUTORIAL" },
 	  { 
 		"text": "Do you think our relationship is ready for the next level?",
-		"effect": { "npc_add_effect": "recent_romance_proposal", "duration": 60000 },
 		"trial": { "type": "PERSUADE", "difficulty": 30 },
-		"success": { "topic": "RELATIONSHIP_START_1", "opinion": { "trust": 1, "anger": -1, "value": 1 } },
-		"failure": { "topic": "RELATIONSHIP_DENIED" },
+		"success": { "topic": "RELATIONSHIP_START_1", "opinion": { "trust": 1, "anger": -1, "value": 1 }, "effect": { "npc_add_effect": "recent_romance_proposal", "duration": 60000 } },
+		"failure": { "topic": "RELATIONSHIP_DENIED", "effect": { "npc_add_effect": "recent_romance_proposal", "duration": 60000 } },
 		"condition": { "and": [
 			{ "not": { "npc_has_var": "ROMANCED", "type": "general", "context": "relationship", "value": "yes" } },
 			{ "not": { "npc_has_effect": "recent_romance_proposal" } }
@@ -237,6 +236,13 @@
         "default": true
       },
       {
+        "text": "Since we can't build a camp here, I want you to tell me where can we build a camp?",
+        "topic": "TALK_CAMP_SITES",
+        "condition": { "not": { "npc_at_om_location": "FACTION_CAMP_START" } },
+        "switch": true,
+        "default": true
+      },
+      {
         "text": "We need to abandon this camp.",
         "condition": { "npc_at_om_location": "FACTION_CAMP_ANY" },
         "topic": "TALK_DONE",
@@ -379,8 +385,8 @@
       {
         "truefalsetext": {
           "condition": { "npc_rule": "follow_distance_2" },
-          "false": "<ally_rule_follow_distance_2_true_text>",
-          "true": "<ally_rule_follow_distance_2_false_text>"
+          "false": "<ally_rule_follow_distance_request_2_text>",
+          "true": "<ally_rule_follow_distance_request_4_text>"
         },
         "topic": "TALK_COMBAT_COMMANDS",
         "effect": { "toggle_npc_rule": "follow_distance_2" }
@@ -843,7 +849,7 @@
     "type": "talk_topic",
     "dynamic_line": "You're really leaving?",
     "responses": [
-      { "text": "Yeah, I'm sure.  Bye.", "topic": "TALK_DONE", "effect": "leave", "opinion": { "trust": -1, "value": -1 } },
+      { "text": "Yeah, I'm sure.  Bye.", "topic": "TALK_DONE", "effect": "leave", "opinion": { "trust": -2, "anger": 1 } },
       { "text": "Nah, I'm just kidding.", "topic": "TALK_NONE" }
     ]
   },
