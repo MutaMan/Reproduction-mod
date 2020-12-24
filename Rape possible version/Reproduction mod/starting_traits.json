@@ -1,14 +1,11 @@
 [
   {
-    "type": "trait_group",
-	"subtype": "collection",
-	"copy_from": "NPC_starting_traits",
     "id": "NPC_starting_traits",
-	"extend": {
+	"type": "trait_group",
+	"subtype": "collection",
 	"traits": [
-      { "trait": "VAGINA", "prob": 45 },
-      { "trait": "PENIS", "prob": 45 }
+      { "trait": "VAGINA", "prob": 50 },
+      { "trait": "PENIS", "prob": 40 }
     ]
-	}
   }
 ]

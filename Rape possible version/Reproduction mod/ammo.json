@@ -6,17 +6,17 @@
 	"type": "ammunition_type"
   },
   {
-	"id": "human_sperm",
 	"type": "AMMO",
-	"category": "OTHER",
+	"id": "human_sperm",
 	"name": { "str": "sperm", "str_pl": "sperm" },
-	"description": "Sperm.",
-	"symbol": "~",
+	"category": "OTHER",
+	"weight": "0 g",
 	"color": "white",
-	"material": "flesh",
-	"spoils_in": "1 day",
-	"ammo_type": "human_sperm_type",
+	"symbol": "~",
+	"description": "Sperm.",
 	"flags": [ "ZERO_WEIGHT" ],
+	"material": "flesh",
+	"ammo_type": "human_sperm_type",
 	"effects": [ "NEVER_MISFIRES", "NON-FOULING" ]
   }
 ]
