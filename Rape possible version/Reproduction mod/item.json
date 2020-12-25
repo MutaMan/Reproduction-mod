@@ -128,9 +128,7 @@
   },
   {
     "id": "human_birth_item",
-    "type": "COMESTIBLE",
-    "comestible_type": "MED",
-	"material": "alcohol",
+    "type": "TOOL",
     "symbol": "b",
     "name": { "str": "Completed pregnancy", "str_pl": "Completed pregnancies" },
     "description": "A pregnancy come to full term. Activate to give birth.",
