@@ -1,0 +1,11 @@
+[
+  {
+    "id": "NPC_starting_traits",
+	"type": "trait_group",
+	"subtype": "collection",
+	"traits": [
+      { "trait": "VAGINA", "prob": 50 },
+      { "trait": "PENIS", "prob": 40 }
+    ]
+  }
+]
